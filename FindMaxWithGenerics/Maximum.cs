@@ -8,7 +8,8 @@ namespace FindMaxWithGenerics
 {
     class Maximum
     {
-        public int MaxOutOfThree(int num1, int num2, int num3)
+        //Using generic Method to find Max out of three values(instead of T can use Any uppercase)
+        public T MaxOutOfThree<T>(T num1, T num2, T num3) where T:IComparable
         {
             if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
             {
@@ -24,45 +25,7 @@ namespace FindMaxWithGenerics
             }
             else
             {
-                return 0;
-            }
-        }
-        public float MaxOutOfThree(float num1, float num2, float num3)
-        {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
-            {
-                return num1;
-            }
-            else if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
-            {
-                return num2;
-            }
-            else if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
-            {
-                return num3;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        public string MaxOutOfThree(string num1, string num2, string num3)
-        {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
-            {
-                return num1;
-            }
-            else if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
-            {
-                return num2;
-            }
-            else if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
-            {
-                return num3;
-            }
-            else
-            {
-                return null;
+                return default;
             }
         }
     }
