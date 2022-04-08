@@ -32,5 +32,10 @@ namespace FindMaxWithGenerics
             T maxValue = GetMaxOfGiven(this.values);
             return maxValue;
         }
+        public void PrintMax()
+        {
+            T maxValue = GetMaxOfGiven(this.values);
+            Console.WriteLine("Maximum value is : " + maxValue);
+        }
     }
 }

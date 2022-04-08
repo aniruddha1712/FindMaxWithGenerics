@@ -27,13 +27,8 @@ namespace FindMaxWithGenerics
                     Console.WriteLine("Enter fourth integer");
                     int intNum4 = Convert.ToInt32(Console.ReadLine());
                     int[] intArray = { intNum1, intNum2, intNum3, intNum4 };
-                    int intMax = new Maximum<int>(intArray).GetMax();
-                    if (intMax == 0)
-                    {
-                        Console.WriteLine("Two or more integers have equal value");
-                    }
-                    else
-                        Console.WriteLine("Maximum out of given integers: " + intMax);
+                    Maximum<int> intMax = new Maximum<int>(intArray);
+                    intMax.PrintMax();
                     break;
                 case 2:
                     Console.WriteLine("Enter first Float value");
@@ -45,13 +40,8 @@ namespace FindMaxWithGenerics
                     Console.WriteLine("Enter fourth Float value");
                     float floatNum4 = float.Parse(Console.ReadLine());
                     float[] floatArray = { floatNum1, floatNum2, floatNum3, floatNum4 };
-                    float floatMax = new Maximum<float>(floatArray).GetMax();
-                    if (floatMax == 0)
-                    {
-                        Console.WriteLine("Two or more floats have equal value");
-                    }
-                    else
-                        Console.WriteLine("Maximum out of given floats: " + floatMax);
+                    Maximum<float> floatMax = new Maximum<float>(floatArray);
+                    floatMax.PrintMax();
                     break;
                 case 3:
                     Console.WriteLine("Enter first string");
@@ -63,13 +53,9 @@ namespace FindMaxWithGenerics
                     Console.WriteLine("Enter third string");
                     string str4 = Console.ReadLine();
                     string[] strArray = { str1, str2, str3, str4 };
-                    string strMax = new Maximum<string>(strArray).GetMax();
-                    if (strMax == null)
-                    {
-                        Console.WriteLine("Two or more strings are same");
-                    }
-                    else
-                        Console.WriteLine("Maximum out of given strings: " + strMax);
+                    Maximum<string> stringMax = new Maximum<string>(strArray);
+                    stringMax.PrintMax();
+                    Console.ReadLine();
                     break;
                 case 4:
                     Environment.Exit(0);
