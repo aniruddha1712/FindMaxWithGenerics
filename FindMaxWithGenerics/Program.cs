@@ -55,7 +55,6 @@ namespace FindMaxWithGenerics
                     string[] strArray = { str1, str2, str3, str4 };
                     Maximum<string> stringMax = new Maximum<string>(strArray);
                     stringMax.PrintMax();
-                    Console.ReadLine();
                     break;
                 case 4:
                     Environment.Exit(0);
