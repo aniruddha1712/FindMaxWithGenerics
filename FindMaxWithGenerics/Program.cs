@@ -24,13 +24,16 @@ namespace FindMaxWithGenerics
                     int intNum2 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter third integer");
                     int intNum3 = Convert.ToInt32(Console.ReadLine());
-                    int intMax = new Maximum<int>(intNum1, intNum2, intNum3).GetMax();
-                    if(intMax==0)
+                    Console.WriteLine("Enter fourth integer");
+                    int intNum4 = Convert.ToInt32(Console.ReadLine());
+                    int[] intArray = { intNum1, intNum2, intNum3, intNum4 };
+                    int intMax = new Maximum<int>(intArray).GetMax();
+                    if (intMax == 0)
                     {
-                        Console.WriteLine("Two or Three numbers have equal value");
+                        Console.WriteLine("Two or more integers have equal value");
                     }
                     else
-                        Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}",intNum1,intNum2,intNum3,intMax);
+                        Console.WriteLine("Maximum out of given integers: " + intMax);
                     break;
                 case 2:
                     Console.WriteLine("Enter first Float value");
@@ -39,13 +42,16 @@ namespace FindMaxWithGenerics
                     float floatNum2 = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter third Float value");
                     float floatNum3 = float.Parse(Console.ReadLine());
-                    float floatMax = new Maximum<float>(floatNum1, floatNum2, floatNum3).GetMax();
+                    Console.WriteLine("Enter fourth Float value");
+                    float floatNum4 = float.Parse(Console.ReadLine());
+                    float[] floatArray = { floatNum1, floatNum2, floatNum3, floatNum4 };
+                    float floatMax = new Maximum<float>(floatArray).GetMax();
                     if (floatMax == 0)
                     {
-                        Console.WriteLine("Two or Three floats have equal value");
+                        Console.WriteLine("Two or more floats have equal value");
                     }
                     else
-                        Console.WriteLine("Maximum out of given floats {0} {1} & {2} is {3}", floatNum1, floatNum2, floatNum3, floatMax);
+                        Console.WriteLine("Maximum out of given floats: " + floatMax);
                     break;
                 case 3:
                     Console.WriteLine("Enter first string");
@@ -54,13 +60,16 @@ namespace FindMaxWithGenerics
                     string str2 = Console.ReadLine();
                     Console.WriteLine("Enter third string");
                     string str3 = Console.ReadLine();
-                    string strMax = new Maximum<string>(str1, str2, str3).GetMax();
+                    Console.WriteLine("Enter third string");
+                    string str4 = Console.ReadLine();
+                    string[] strArray = { str1, str2, str3, str4 };
+                    string strMax = new Maximum<string>(strArray).GetMax();
                     if (strMax == null)
                     {
-                        Console.WriteLine("Two or Three strings are same");
+                        Console.WriteLine("Two or more strings are same");
                     }
                     else
-                        Console.WriteLine("Maximum out of given strings {0} {1} & {2} is {3}", str1, str2, str3, strMax);
+                        Console.WriteLine("Maximum out of given strings: " + strMax);
                     break;
                 case 4:
                     Environment.Exit(0);
