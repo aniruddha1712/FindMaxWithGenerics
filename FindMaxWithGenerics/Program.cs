@@ -13,7 +13,7 @@ namespace FindMaxWithGenerics
             Console.WriteLine("Welcome to the Find Maximum using GENERICS program");
 
             Maximum maximum = new Maximum();
-            Console.WriteLine("Choose the option below.....\n1. Find Max Of Three Int Number\n ");
+            Console.WriteLine("Choose the option below.....\n1. Find Max Of Three Int Number\n2. Find Max of Three Float values\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -31,6 +31,21 @@ namespace FindMaxWithGenerics
                     }
                     else
                         Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}",intNum1,intNum2,intNum3,intMax);
+                    break;
+                case 2:
+                    Console.WriteLine("Enter first Float value");
+                    float floatNum1 = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter second Float value");
+                    float floatNum2 = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter third Float value");
+                    float floatNum3 = float.Parse(Console.ReadLine());
+                    float floatMax = maximum.MaxOutOfThree(floatNum1, floatNum2, floatNum3);
+                    if (floatMax == 0)
+                    {
+                        Console.WriteLine("Two or Three numbers have equal value");
+                    }
+                    else
+                        Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}", floatNum1, floatNum2, floatNum3, floatMax);
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
