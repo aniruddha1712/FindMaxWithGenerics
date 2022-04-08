@@ -12,9 +12,8 @@ namespace FindMaxWithGenerics
         {
             Console.WriteLine("Welcome to the Find Maximum using GENERICS program\n");
 
-            Maximum maximum = new Maximum();
             Console.WriteLine("Choose the option below.....\n1. Find Max Of Three Int Number\n2. Find Max of Three Float values" +
-                "\n3. Find Max Of Three Strings\n");
+                "\n3. Find Max Of Three Strings\n4. Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -25,7 +24,7 @@ namespace FindMaxWithGenerics
                     int intNum2 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter third integer");
                     int intNum3 = Convert.ToInt32(Console.ReadLine());
-                    int intMax = maximum.MaxOutOfThree(intNum1, intNum2, intNum3);
+                    int intMax = new Maximum<int>(intNum1, intNum2, intNum3).GetMax();
                     if(intMax==0)
                     {
                         Console.WriteLine("Two or Three numbers have equal value");
@@ -40,13 +39,13 @@ namespace FindMaxWithGenerics
                     float floatNum2 = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter third Float value");
                     float floatNum3 = float.Parse(Console.ReadLine());
-                    float floatMax = maximum.MaxOutOfThree(floatNum1, floatNum2, floatNum3);
+                    float floatMax = new Maximum<float>(floatNum1, floatNum2, floatNum3).GetMax();
                     if (floatMax == 0)
                     {
-                        Console.WriteLine("Two or Three numbers have equal value");
+                        Console.WriteLine("Two or Three floats have equal value");
                     }
                     else
-                        Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}", floatNum1, floatNum2, floatNum3, floatMax);
+                        Console.WriteLine("Maximum out of given floats {0} {1} & {2} is {3}", floatNum1, floatNum2, floatNum3, floatMax);
                     break;
                 case 3:
                     Console.WriteLine("Enter first string");
@@ -55,7 +54,7 @@ namespace FindMaxWithGenerics
                     string str2 = Console.ReadLine();
                     Console.WriteLine("Enter third string");
                     string str3 = Console.ReadLine();
-                    string strMax = maximum.MaxOutOfThree(str1, str2, str3);
+                    string strMax = new Maximum<string>(str1, str2, str3).GetMax();
                     if (strMax == null)
                     {
                         Console.WriteLine("Two or Three strings are same");
@@ -63,7 +62,9 @@ namespace FindMaxWithGenerics
                     else
                         Console.WriteLine("Maximum out of given strings {0} {1} & {2} is {3}", str1, str2, str3, strMax);
                     break;
-
+                case 4:
+                    Environment.Exit(0);
+                    break;
                 default:
                     Console.WriteLine("Invalid Input");
                     break;
