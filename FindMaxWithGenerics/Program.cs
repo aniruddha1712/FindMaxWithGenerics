@@ -12,47 +12,47 @@ namespace FindMaxWithGenerics
         {
             Console.WriteLine("Welcome to the Find Maximum using GENERICS program\n");
 
-            Console.WriteLine("Choose the option below.....\n1. Find Max Of Three Int Number\n2. Find Max of Three Float values" +
-                "\n3. Find Max Of Three Strings\n4. Exit\n");
+            Console.WriteLine("Choose the option below.....\n1. Find Max Of given Int Number\n2. Find Max of given Float values" +
+                "\n3. Find Max Of given Strings\n4. Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
                 case 1:
+                    int[] intArray = new int[4];
                     Console.WriteLine("Enter first integer");
-                    int intNum1 = Convert.ToInt32(Console.ReadLine());
+                    intArray[0] = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter second integer");
-                    int intNum2 = Convert.ToInt32(Console.ReadLine());
+                    intArray[1] = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter third integer");
-                    int intNum3 = Convert.ToInt32(Console.ReadLine());
+                    intArray[2] = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Enter fourth integer");
-                    int intNum4 = Convert.ToInt32(Console.ReadLine());
-                    int[] intArray = { intNum1, intNum2, intNum3, intNum4 };
+                    intArray[3] = Convert.ToInt32(Console.ReadLine());
                     Maximum<int> intMax = new Maximum<int>(intArray);
                     intMax.PrintMax();
                     break;
                 case 2:
+                    float[] floatArray = new float[4];
                     Console.WriteLine("Enter first Float value");
-                    float floatNum1 = float.Parse(Console.ReadLine());
+                    floatArray[0]  = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter second Float value");
-                    float floatNum2 = float.Parse(Console.ReadLine());
+                    floatArray[1]  = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter third Float value");
-                    float floatNum3 = float.Parse(Console.ReadLine());
+                    floatArray[2]  = float.Parse(Console.ReadLine());
                     Console.WriteLine("Enter fourth Float value");
-                    float floatNum4 = float.Parse(Console.ReadLine());
-                    float[] floatArray = { floatNum1, floatNum2, floatNum3, floatNum4 };
+                    floatArray[3]  = float.Parse(Console.ReadLine());
                     Maximum<float> floatMax = new Maximum<float>(floatArray);
                     floatMax.PrintMax();
                     break;
                 case 3:
+                    string[] strArray = new string[4];
                     Console.WriteLine("Enter first string");
-                    string str1 = Console.ReadLine();
+                    strArray[0] = Console.ReadLine();
                     Console.WriteLine("Enter second string");
-                    string str2 = Console.ReadLine();
+                    strArray[1] = Console.ReadLine();
                     Console.WriteLine("Enter third string");
-                    string str3 = Console.ReadLine();
+                    strArray[2] = Console.ReadLine();
                     Console.WriteLine("Enter third string");
-                    string str4 = Console.ReadLine();
-                    string[] strArray = { str1, str2, str3, str4 };
+                    strArray[3] = Console.ReadLine();
                     Maximum<string> stringMax = new Maximum<string>(strArray);
                     stringMax.PrintMax();
                     Console.ReadLine();
